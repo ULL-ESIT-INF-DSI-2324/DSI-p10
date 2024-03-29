@@ -1,28 +1,18 @@
-name: Sonar-Cloud 
-
+name: Build
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
-
+    types: [opened, synchronize, reopened]
 jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - name: Cloning repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Using Node.js 21.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21.x
-      - name: Installing dependencies
-        run: npm ci
-      - name: Generating coverage report
-        run: npm run coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
