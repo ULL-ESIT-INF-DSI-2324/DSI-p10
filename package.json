@@ -1,0 +1,33 @@
+{
+  "name": "ull-dsi-p10-modi-angelaizquierdo",
+  "version": "1.0.0",
+  "description": "Desarrollo del entorno de la práctica 10 para la modificación de la asignatura",
+  "main": "ejercicioficheros.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node dist/ejercicio-1/cliente.js\"",
+    "doc": "typedoc",
+    "test": "mocha",
+    "coverage": "c8 npm test && c8 report --reporter=lcov"
+  },
+  "keywords": [],
+  "author": "Ángela Izquierdo Padrón",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "c8": "^9.1.0",
+    "chai": "^4.4.1",
+    "coveralls": "^3.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.0",
+    "typedoc": "^0.25.12"
+  }
+}
