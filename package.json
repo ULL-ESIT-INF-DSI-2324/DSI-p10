@@ -2,10 +2,10 @@
   "name": "ull-dsi-p10-modi-angelaizquierdo",
   "version": "1.0.0",
   "description": "Desarrollo del entorno de la práctica 10 para la modificación de la asignatura",
-  "main": "ejercicioficheros.js",
+  "main": "servidor.js",
   "type": "module",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node dist/ejercicio-1/cliente.js\"",
+    "dev": "tsc-watch --onSuccess \"node dist/servidor.js\"",
     "doc": "typedoc",
     "test": "mocha",
     "coverage": "c8 npm test && c8 report --reporter=lcov"
